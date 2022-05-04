@@ -1,0 +1,389 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color: #10cab7;
+    --secondary-color: #2c4755;
+    --section-padding: 60px;
+    --section-background: #f6f6f6;
+    --main-duration: 0.5s;
+}
+
+body {
+    font-family: 'Work Sans', sans-serif;
+}
+
+/* End Global Rules */
+
+/* Start header  */
+.container {
+    margin: auto 50px auto 50px;
+    padding: 30px;
+
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    height: 62px;
+
+}
+
+header ul {
+    position: absolute;
+    display: none;
+
+    background-color: #ddd;
+    right: 56px;
+    top: 62px;
+    width: 185px;
+    margin: 0 50px;
+    padding: 0;
+    list-style: none;
+}
+
+header .links:hover ul {
+    display: block;
+}
+
+header ul::before {
+    content: "";
+    position: absolute;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #ddd transparent;
+    right: 0;
+    top: -20px;
+}
+
+header ul li {
+    padding: 10px;
+    border-bottom: 1px solid #e4e5e7;
+}
+
+header ul li:hover {
+    transition: var(--main-duration);
+    padding-left: 30px;
+
+}
+
+header .container img {
+    padding-left: 20px;
+}
+
+header .container i {
+    padding: 6px 47px 10px 10px;
+    font-size: 2em;
+}
+
+/*Start header  */
+
+/* Start landing Page */
+.landing {
+    background-image: url(../images/landing.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: calc(100vh - 62px);
+    display: flex;
+    justify-content: center;
+}
+
+.landing .intro {
+    margin: auto;
+    width: 310px;
+}
+
+.landing .intro h1 {
+    margin: 0;
+    font-weight: bold;
+    font-size: 50px;
+    color: var(--main-color);
+}
+
+.landing .intro p {
+    font-size: 19px;
+    line-height: 1.8;
+}
+
+/* Start .features */
+.features {
+    background-color: #f6f6f6;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    justify-content: space-around
+}
+
+
+@media only screen and (max-width: 780px) {
+    .features .container {
+        justify-content: center !important;
+
+    }
+
+}
+
+.features .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.features .feat {
+    width: 300px;
+    text-align: center;
+
+}
+
+.features .feat i {
+    color: var(--main-color);
+    font-weight: bolder;
+}
+
+.features .feat p {
+    line-height: 1.8;
+    color: #777;
+    font-size: 17px;
+}
+
+/* Start Services */
+.services {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.services-content {
+    margin-top: 64px;
+    display: flex;
+    justify-content: space-between;
+    ;
+    border-right: 80px solid var(--secondary-color);
+}
+
+.header {
+    text-align: center;
+}
+
+.header h1 {
+    color: #e4e5e7;
+    font-size: 100px;
+    font-weight: 800;
+    letter-spacing: -3px;
+    margin: 0;
+}
+
+@media (max-width:767px) {
+    .header h1 {
+        font-size: 70px;
+    }
+}
+
+.header p {
+    margin: -30px 0 0;
+    font-size: 20px;
+    text-align: center;
+    color: #797979;
+}
+
+.services-content .col .srv {
+
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.services-content .col .text {
+    width: 365px;
+}
+
+@media (max-width : 767px) {
+    .services-content .col .text {
+        width: 300px;
+    }
+}
+
+.services-content .col .srv i {
+    color: var(--main-color);
+}
+
+.services-content .text {
+    margin: 0 auto auto 20px;
+}
+
+.col {
+    margin-top: 30px;
+}
+
+.col img {
+    width: 200px;
+    margin-bottom: 23px;
+}
+
+@media screen and (max-width : 1252px) {
+    .col img {
+        display: none;
+    }
+
+    .services-content {
+        border-right: 0;
+    }
+}
+
+@media screen and (max-width : 950px) {
+    .services-content {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/* End Section */
+
+/* Start portfolio */
+.portfolio {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: var(--section-background);
+
+}
+
+.portfolioContent {
+    margin-top: 64px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.portfolioContent .card {
+    background-color: white;
+    width: 30%;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+}
+
+@media (max-width:767px) {
+    .portfolioContent .card {
+        width: 400px;
+    }
+}
+
+.portfolioContent img {
+    width: 100%;
+}
+
+.portfolioContent .card .text {
+    padding: 10px;
+    padding-left: 30px;
+}
+
+.portfolioContent .card .text p {
+    color: #777;
+    line-height: 1.6;
+}
+
+/* End Portfolio */
+.about {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 64px;
+
+}
+
+.about-content img {
+    width: 260px;
+}
+
+@media (max-width:767px) {
+    .about-content img {
+        display: none;
+    }
+}
+
+.about-content .col {
+    width: 600px;
+}
+
+.about-content .col .text {
+    font-weight: bold;
+    line-height: 2;
+    margin-bottom: 50px;
+}
+
+.about-content .col hr {
+    background-color: var(--main-color);
+    padding: 1px;
+    border: none;
+    width: 300px;
+    margin-left: 0%;
+}
+
+/* End of About */
+
+/* Start Contact */
+.contact {
+    background-color: var(--section-background);
+    height: 500px;
+}
+
+.contact-content {
+    text-align: center;
+}
+
+.contact-content h2 {
+    font-size: 35px;
+    font-weight: 800;
+    color: var(--secondary-color);
+    letter-spacing: -2px;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+    .contact-content h2 {
+        font-size: 20px;
+    }
+}
+
+.contact-content h2 a {
+    color: var(--main-color);
+    text-decoration: none;
+}
+
+.contact-content .social i {
+    color: var(--secondary-color);
+}
+
+.about .about-content .col div:last-of-type {
+    font-weight: 400;
+    line-height: 2;
+    color: #777;
+}
+
+/* End Contact */
+
+/* Start footer */
+.footer {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 30px 10px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.footer p {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.footer span {
+    color: var(--main-color);
+}
+
+/* End footer */
